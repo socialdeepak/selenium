@@ -1,0 +1,40 @@
+package pageObject;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+
+
+public class LoginPage 
+{
+	
+		public WebDriver driver;
+		
+		@FindBy(xpath=".//*[@id='email']")
+		WebElement EmailAddress;
+		
+		@FindBy(name="passwd")
+		WebElement Password;
+		
+		@FindBy(name="SubmitLogin")
+		WebElement Submit;
+		
+		public LoginPage(WebDriver driver)
+		{
+			this.driver=driver;
+			PageFactory.initElements(driver, this);
+		}
+		
+		public void LoginToApp(String emailID,String passWord)
+		{
+			EmailAddress.sendKeys(emailID);
+			Password.sendKeys(passWord);
+			Submit.click();
+			
+			
+		}
+
+	
+}

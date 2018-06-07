@@ -1,0 +1,51 @@
+package com.automationtest.E2EProject;
+
+import java.io.IOException;
+
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import pageObject.LandingPage;
+import pageObject.LoginPage;
+import pageObject.ResultPage;
+import testBase.Base;
+
+public class TC01VerifyLoginWithInvalidCredentials extends Base
+{
+	LandingPage landpage;
+	LoginPage LogPage;
+	ResultPage rp;
+  @Test
+  public void LoginWithInvalidCredential() throws InterruptedException 
+  {
+	 // driver.get("http://automationpractice.com/index.php");
+	  LandingPage landpage=new LandingPage(driver);
+	  landpage.signInToPage();
+	  
+	  Thread.sleep(3000);
+	  LogPage=new LoginPage(driver);
+	  LogPage.LoginToApp("abc@gmail.com","password");
+	  
+	  rp=new ResultPage(driver);
+	  Assert.assertEquals(rp.getInvalidLoginTest(),"Authentication failed.");
+  }
+  @BeforeTest
+  public void Setup() throws IOException 
+  {
+	  init();
+	 /*driver=init();
+	 driver.get(pro.getProperty("url"));
+	 driver.get("http://automationpractice.com/index.php");
+	  System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\driver\\chromedriver.exe");
+		 driver=new ChromeDriver();*/
+  }
+
+  @AfterTest
+  public void teardown() 
+  {
+	  
+  }
+
+}

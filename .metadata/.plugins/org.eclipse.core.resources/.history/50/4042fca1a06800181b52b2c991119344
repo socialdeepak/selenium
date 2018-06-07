@@ -1,0 +1,66 @@
+package pkgForExcel;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.WebDriver;
+
+public class ExcelReader 
+{
+ public WebDriver driver;
+ public FileInputStream fis;
+ public XSSFWorkbook workbook;
+ public XSSFSheet sheet;
+ public XSSFRow rows;
+ public XSSFCell cells;
+ public String path;
+ 
+ public ExcelReader(String path)
+ {
+	 this.driver=driver; 
+	 try {
+		fis=new FileInputStream(path);
+	    workbook=new XSSFWorkbook(fis);
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+ }
+ 
+ 
+@SuppressWarnings("static-access")
+public String[][] getDataFromSheet(String SheetName,String ExcelName)
+ {
+	 String dataSets[][]=null;
+	try {
+		
+		
+		XSSFSheet sheet=workbook.getSheet(SheetName);
+		int totalRows=sheet.getLastRowNum()+1;
+		int totalColumn=sheet.getRow(0).getLastCellNum();
+		dataSets=new String[totalRows-1][totalColumn]; 
+		for(int i=1;i<totalRows;i++)
+		{
+			XSSFRow rows=sheet.getRow(i);
+		 for(int j=0;j<totalColumn;j++)	
+		 {
+			XSSFCell cell=rows.getCell(j);
+			if(cell.getCellType()==cell.CELL_TYPE_STRING)
+				
+		 } 
+		}	
+		
+	
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	return null;
+	 
+ }
+}

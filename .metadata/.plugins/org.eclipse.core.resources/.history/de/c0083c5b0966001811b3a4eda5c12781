@@ -1,0 +1,30 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class hitUrl {
+
+	public static void main(String[] args) throws IOException 
+	{
+	  WebDriver driver;
+	  Properties pro;
+	  FileInputStream fis;
+	  
+	  System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\lib\\chromedriver.exe");
+	  driver=new ChromeDriver();
+	  
+	  pro=new Properties();
+	  fis=new FileInputStream("E:\\Priti-selenium-practice\\MySeleniumProject\\Selenium4Interview\\Data.properties");
+	  pro.load(fis);
+	  String urlName=pro.getProperty("url");
+	  //String url="http://automationpractice.com/index.php";
+	  driver.get(urlName);
+	  System.out.println(urlName);
+
+	}
+
+}

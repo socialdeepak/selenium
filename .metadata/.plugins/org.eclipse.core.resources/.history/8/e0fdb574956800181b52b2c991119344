@@ -1,0 +1,19 @@
+package pkgForExcel;
+
+import java.io.FileInputStream;
+
+import org.openqa.selenium.WebDriver;
+
+public class ExcelReader 
+{
+ public WebDriver driver;
+ public FileInputStream fis;
+ public XSSFWorkbook workbook;
+ public XSSFWorkSheet sheet;
+ 
+ public ExcelReader(String path)
+ {
+	 this.driver=driver;
+	 
+ }
+}

@@ -1,0 +1,36 @@
+package basicProgram;
+
+import java.util.Scanner;
+
+public class DescendingOrder {
+
+	public static void main(String[] args)
+	{
+		int n,temp;
+		Scanner s=new Scanner(System.in);
+		n=s.nextInt();
+		System.out.println("Enter the numbers u want to enter in a array:");
+		int a[]=new int[n];
+		System.out.println("Enter all the elements u want to enter:");
+		for (int i=0;i<n-1;i++)
+		{
+			a[i]=s.nextInt();
+		}
+		for(int i=0;i<n-1;i++)
+		{
+		  for(int j=i+1;j<n;j++)
+		  {
+			while(i<j)
+			{
+				temp=a[i];
+				a[i]=a[j];
+				a[j]=temp;
+			}	
+		  }  
+		}	
+		 
+		
+
+	}
+
+}

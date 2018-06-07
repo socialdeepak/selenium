@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Data.properties&apos; to &apos;Selenium4Interview&apos;&#x0D;&#x0A;- Original project: &apos;E2EProject&apos;&#x0D;&#x0A;- Destination element: &apos;Selenium4Interview&apos;&#x0D;&#x0A;- Original element: &apos;Data.properties&apos;" description="Copy file" destination="=Selenium4Interview" element1="src/main/java/resources/Data.properties" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1527904395776" units="0" version="1.0"/>
+</session>

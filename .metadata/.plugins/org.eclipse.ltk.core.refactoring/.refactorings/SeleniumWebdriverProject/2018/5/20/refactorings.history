@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;ActionClass.java&apos; to &apos;Selenium4Interview/src/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;SeleniumWebdriverProject&apos;&#x0D;&#x0A;- Destination element: &apos;Selenium4Interview/src/(default package)&apos;&#x0D;&#x0A;- Original element: &apos;pkgSeleniumWebdriver.ActionClass.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=Selenium4Interview/src&lt;" element1="/src&lt;pkgSeleniumWebdriver{ActionClass.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1526319327619" units="1" version="1.0"/>
+</session>

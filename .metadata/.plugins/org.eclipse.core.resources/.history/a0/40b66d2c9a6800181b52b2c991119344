@@ -1,0 +1,33 @@
+package pkgForExcel;
+
+import java.io.FileInputStream;
+
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.WebDriver;
+
+public class ExcelReader 
+{
+ public WebDriver driver;
+ public FileInputStream fis;
+ public XSSFWorkbook workbook;
+ public XSSFSheet sheet;
+ public XSSFRow rows;
+ public XSSFCell cells;
+ public String path;
+ 
+ public ExcelReader(String path)
+ {
+	 this.driver=driver; 
+ }
+ 
+ public String[][] getDataFromSheet(String SheetName,String ExcelName)
+ {
+	
+	 
+	 return null;
+	 
+ }
+}

@@ -1,0 +1,7 @@
+==================Starting TC003_VerifyLoginWithDifferentRecords Test================
+Clicked on Sign in and object is:- [[ChromeDriver: chrome on XP (924fd6f9780fda28b0a779056078d3e0)] -> xpath: .//*[@id='header']/div[2]/div/div/nav/div[1]/a]
+Entered email adress :-automation@gmail.comand object is:- [[ChromeDriver: chrome on XP (924fd6f9780fda28b0a779056078d3e0)] -> xpath: .//*[@id='email']]
+Entered password :-passwordand object is:- [[ChromeDriver: chrome on XP (924fd6f9780fda28b0a779056078d3e0)] -> name: passwd]
+Clicked on Submit button and object is :-[[ChromeDriver: chrome on XP (924fd6f9780fda28b0a779056078d3e0)] -> name: SubmitLogin]
+Error message is :-Authentication failed.
+==================Ending TC003_VerifyLoginWithDifferentRecords Test================
